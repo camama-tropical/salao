@@ -66,6 +66,112 @@
 <!-- Conteúdo Humor -->
 <main>
   <section class="ambiente">
+    <h1 style="color:#FFD700; text-align:center;">Noites de Humor e Stand Up</h1>
+    <p style="text-align:center;">Diversão garantida com os melhores humoristas nacionais e internacionais.</p>
+
+    <!-- Galeria de Humor -->
+    <div class="galeria">
+      <img src="imagens/standup.jpg" alt="Stand Up Comedy">
+     
+      
+    </div>
+  </section>
+</main>
+
+<!-- Script Menu Mobile -->
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('active') &&
+        !mobileMenu.contains(e.target) &&
+        e.target !== menuToggle) {
+      mobileMenu.classList.remove('active');
+    }
+  });
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show de Humor | Camama Tropical</title>
+  <link rel="stylesheet" href="mestre.css"> <!-- CSS padrão -->
+  <link rel="icon" type="image/jpg" href="imagens/logo.jpg">
+</head>
+<body>
+
+<!-- Navbar Pilot -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="imagens/logo.jpg" alt="Logo Camama Tropical">
+    </a>
+  </div>
+  <button class="menu-toggle">☰</button>
+  <ul class="nav-links">
+    <li><a href="filme.html">Filmes</a></li>
+    <li><a href="teatro.html">Teatro</a></li>
+    <li><a href="stand.html">Show de Humor</a></li>
+    <li><a href="eventos.html">Eventos</a></li>
+    <li><a href="contactos.html">Contactos</a></li>
+    <li>
+      <a href="https://www.instagram.com/camama.tropical?utm_source=qr" target="_blank">
+        <img src="imagens/instagram-logo.jpg" alt="Instagram"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        camama.tropical
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/244976194731" target="_blank">
+        <img src="imagens/whatsapp-logo.jpg" alt="WhatsApp"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        Posso ajudar?
+      </a>
+    </li>
+  </ul>
+
+  <!-- Menu mobile -->
+  <ul class="mobile-menu">
+    <li><a href="filme.html">Filmes</a></li>
+    <li><a href="teatro.html">Teatro</a></li>
+    <li><a href="stand.html">Show de Humor</a></li>
+    <li><a href="eventos.html">Eventos</a></li>
+    <li><a href="contactos.html">Contactos</a></li>
+    <li>
+      <a href="https://www.instagram.com/camama.tropical?utm_source=qr" target="_blank">
+        <img src="imagens/instagram-logo.jpg" alt="Instagram"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        camama.tropical
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/244976194731" target="_blank">
+        <img src="imagens/whatsapp-logo.jpg" alt="WhatsApp"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        Posso ajudar?
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Conteúdo Humor -->
+<main>
+  <section class="ambiente">
     <h1 style="color:#FFD700; text-align:center;">😂 Noites de Humor e Stand Up</h1>
     <p style="text-align:center;">Diversão garantida com os melhores humoristas nacionais e internacionais.</p>
 
