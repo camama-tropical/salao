@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos | Camama Tropical</title>
+  <link rel="stylesheet" href="mestre.css"> <!-- CSS padrão -->
+  <link rel="icon" type="image/png" href="imagens/logo.jpg">
+</head>
+<body>
+
+<!-- Navbar Pilot -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="imagens/logo.jpg" alt="Logo Camama Tropical">
+    </a>
+  </div>
+  <button class="menu-toggle">☰</button>
+  <ul class="nav-links">
+    <li><a href="filme.html">Filmes</a></li>
+    <li><a href="teatro.html">Teatro</a></li>
+    <li><a href="stand.html">Show de Humor</a></li>
+    <li><a href="eventos.html">Eventos</a></li>
+    <li><a href="contactos.html">Contactos</a></li>
+    <li>
+      <a href="https://www.instagram.com/camama.tropical?utm_source=qr" target="_blank">
+        <img src="imagens/instagram-logo.jpg" alt="Instagram"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        camama.tropical
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/244976194731" target="_blank">
+        <img src="imagens/whatsapp-logo.jpg" alt="WhatsApp"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        Posso ajudar?
+      </a>
+    </li>
+  </ul>
+
+  <!-- Menu mobile -->
+  <ul class="mobile-menu">
+    <li><a href="filme.html">Filmes</a></li>
+    <li><a href="teatro.html">Teatro</a></li>
+    <li><a href="stand.html">Show de Humor</a></li>
+    <li><a href="eventos.html">Eventos</a></li>
+    <li><a href="contactos.html">Contactos</a></li>
+    <li>
+      <a href="https://www.instagram.com/camama.tropical?utm_source=qr" target="_blank">
+        <img src="imagens/instagram-logo.jpg" alt="Instagram"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        camama.tropical
+      </a>
+    </li>
+    <li>
+      <a href="https://wa.me/244976194731" target="_blank">
+        <img src="imagens/whatsapp-logo.jpg" alt="WhatsApp"
+             style="height:20px;vertical-align:middle;margin-right:6px;">
+        Posso ajudar?
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Conteúdo Eventos -->
+<main>
+  <section class="ambiente">
+    <h2 style="text-align:center; color:#FFD700;">Eventos</h2>
+    <p style="text-align:center;">Descobre os eventos especiais e noites temáticas do Camama Tropical.</p>
+
+    <!-- Galeria de eventos -->
+    <div class="galeria">
+      <a href="fute2026.html">
+        <img src="imagens/Fute2026.jpg" alt="Torneio Fute 2026">
+      </a>
+      <img src="imagens/evento2.jpg" alt="Festival Gastronómico">
+      <img src="imagens/evento3.jpg" alt="Aniversário Camama Tropical">
+      <a href="filme.html">
+        <img src="imagens/filmes.jpg" alt="Programa de Filmes">
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- Script Menu Mobile -->
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('active') &&
+        !mobileMenu.contains(e.target) &&
+        e.target !== menuToggle) {
+      mobileMenu.classList.remove('active');
+    }
+  });
+</script>
+<script src="menu.js"></script>
+</body>
+</html>
